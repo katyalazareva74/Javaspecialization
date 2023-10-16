@@ -1,0 +1,8 @@
+version: '3.9'
+services:
+  app:
+    image: bellsoft/liberica-openjdk-alpine:11.0.16.1-1
+    command: 'javac -sourcepath /app/src -d /app/out1 /app/src/main/java/note/Save1.java /app/src/main/java/note/Note1.java /app/src/main/java/note/Main.java'
+    volumes:
+      - ./out1:/app/out1
+      - ./src:/app/src
