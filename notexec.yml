@@ -1,0 +1,7 @@
+version: '3.9'
+services:
+  app:
+    image: bellsoft/liberica-openjdk-alpine:11.0.16.1-1
+    command: 'java -classpath /app/out1 note.Main'
+    volumes:
+      - ./out1:/app/out1
